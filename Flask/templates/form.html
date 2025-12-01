@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Marks Calculator Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+
+        .calculate {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Includes padding in the element's total width and height */
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff; /* Primary Blue */
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="calculate">
+        
+        <!-- Header -->
+        <h1 style="font-size: 24px; text-align: center; margin-bottom: 20px; color: #333;">
+            Calculate Average Marks
+        </h1>
+
+
+        <form id="marks-form" method="post">
+            
+            <!-- Input for Maths -->
+            <input 
+                type="number" 
+                id="maths"
+                name="maths" 
+                placeholder="Maths Mark" 
+                required
+                min="0"
+            />
+
+            <!-- Input for Science -->
+            <input 
+                type="number" 
+                id="science"
+                name="science" 
+                placeholder="Science Mark" 
+                required
+                min="0"
+            />
+
+            <!-- Input for History -->
+            <input 
+                type="number" 
+                id="history"
+                name="history" 
+                placeholder="History Mark" 
+                required
+                min="0"
+            />
+
+            <!-- Calculate Button -->
+            <button type="submit">
+                Calculate Average
+            </button>
+        </form>
+
+    
+        <br>
+        The Average mark is {{score}}
+        <br>
+
+    </div>
+
+</body>
+</html>
